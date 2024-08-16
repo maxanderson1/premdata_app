@@ -1,0 +1,43 @@
+/* Menubar styles */
+.p-menubar {
+    background-color: #007bff; /* Customize as needed */
+    color: #fff;
+  }
+  
+  /* Sidebar styles */
+  .p-sidebar {
+    width: 200px;
+  }
+
+  /* .sidenav{
+    display: flex;
+    position: absolute;
+    left: 0rem;
+    width: 60px;
+    height: calc(100vh - 4em);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    background-color: rgba(34,34,34,1);
+    border-top: 1px solid white;
+    overflow-x: hidden;
+    white-space: nowrap;
+    transition: width 350ms ease-in;
+  } */
+  
+  /* Layout styling */
+  .layout {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    /* width: calc(100% - 60px); */
+  }
+  
+  .layout main {
+    flex: 1;
+    padding: 200px;
+  }
+  
+  /* Sidebar toggle button styling */
+  button {
+    margin: 10px;
+  }
+  

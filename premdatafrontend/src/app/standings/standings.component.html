@@ -1,0 +1,41 @@
+<p>Showing table data for the {{season}} season</p>
+
+
+<div style="display: flex; justify-content: center; align-items: center;">
+    <button style="padding: 10px 20px; font-size: 16px;" (click)="getTotalTable()">Total</button>
+    <button style="padding: 10px 20px; font-size: 16px;" (click)="getHomeTable()">Home</button>
+    <button style="padding: 10px 20px; font-size: 16px;" (click)="getAwayTable()">Away</button>
+</div>
+
+<p-dropdown 
+    [options]="seasons" 
+    [(ngModel)]="season" 
+    optionLabel="season" 
+    placeholder="Select a season"
+    (onChange)="getTotalTable()"
+    >
+
+    <ng-template let-season pTemplate="item">
+        {{ season }}
+      </ng-template>
+    </p-dropdown>
+
+<div class="card">
+    <p-table [columns]="cols" [value]="standingData" [tableStyle]="{ 'min-width': '50rem' }" styleClass="p-datatable-gridlines"
+    selectionMode="single" [(selection)]="selectedTeam" (onRowSelect)="onRowSelect($event)">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{ col.header }}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr [pSelectableRow]="rowData">
+                <td *ngFor="let col of columns">
+                    {{ rowData[col.field] }}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
