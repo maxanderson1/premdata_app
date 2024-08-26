@@ -1,294 +1,537 @@
-2024-08-16 08:21:58 [main] INFO  c.max.premdata.PremdataApplication - Starting PremdataApplication using Java 17.0.12 with PID 88010 (/Users/maxanderson/Documents/premdata/build/classes/java/main started by maxanderson in /Users/maxanderson/Documents/premdata)
-2024-08-16 08:21:58 [main] INFO  c.max.premdata.PremdataApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-16 08:21:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-16 08:21:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 10 JPA repository interfaces.
-2024-08-16 08:21:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-16 08:21:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:21:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-16 08:21:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-16 08:21:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-16 08:21:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 593 ms
-2024-08-16 08:21:58 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-16 08:21:58 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-16 08:21:58 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-16 08:21:59 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-16 08:21:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-16 08:21:59 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a84a8b2
-2024-08-16 08:21:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-16 08:21:59 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-16 08:21:59 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-16 08:21:59 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:21:59 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-16 08:21:59 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-16 08:22:00 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2024-08-16 08:22:00 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:22:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-08-16 08:22:00 [main] INFO  c.max.premdata.PremdataApplication - Started PremdataApplication in 2.097 seconds (process running for 2.249)
-2024-08-16 08:22:09 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-16 08:22:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-16 08:22:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2024-08-16 08:22:09 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:22:11 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:22:12 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:23:57 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:23:57 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-16 08:23:57 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-08-16 08:23:58 [main] INFO  c.max.premdata.PremdataApplication - Starting PremdataApplication using Java 17.0.12 with PID 88080 (/Users/maxanderson/Documents/premdata/build/classes/java/main started by maxanderson in /Users/maxanderson/Documents/premdata)
-2024-08-16 08:23:58 [main] INFO  c.max.premdata.PremdataApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-16 08:23:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-16 08:23:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 10 JPA repository interfaces.
-2024-08-16 08:23:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-16 08:23:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:23:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-16 08:23:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-16 08:23:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-16 08:23:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 596 ms
-2024-08-16 08:23:58 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-16 08:23:58 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-16 08:23:58 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-16 08:23:59 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-16 08:23:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-16 08:23:59 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12448de1
-2024-08-16 08:23:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-16 08:23:59 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-16 08:23:59 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-16 08:23:59 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:23:59 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-16 08:23:59 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-16 08:24:00 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2024-08-16 08:24:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-08-16 08:24:00 [main] INFO  c.max.premdata.PremdataApplication - Started PremdataApplication in 2.119 seconds (process running for 2.265)
-2024-08-16 08:24:02 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:24:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-16 08:24:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-08-16 08:28:47 [main] INFO  c.max.premdata.PremdataApplication - Starting PremdataApplication using Java 17.0.12 with PID 88536 (/Users/maxanderson/Documents/premdata/build/classes/java/main started by maxanderson in /Users/maxanderson/Documents/premdata)
-2024-08-16 08:28:47 [main] INFO  c.max.premdata.PremdataApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-16 08:28:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-16 08:28:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 10 JPA repository interfaces.
-2024-08-16 08:28:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-16 08:28:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:28:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-16 08:28:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-16 08:28:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-16 08:28:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 968 ms
-2024-08-16 08:28:48 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-16 08:28:48 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-16 08:28:48 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-16 08:28:49 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-16 08:28:49 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-16 08:28:49 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@134d7ffa
-2024-08-16 08:28:49 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-16 08:28:49 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-16 08:28:49 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-16 08:28:49 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:28:50 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-16 08:28:50 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-16 08:28:50 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2024-08-16 08:28:50 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:28:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-08-16 08:28:50 [main] INFO  c.max.premdata.PremdataApplication - Started PremdataApplication in 3.168 seconds (process running for 3.408)
-2024-08-16 08:28:51 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-16 08:28:51 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-16 08:28:51 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2024-08-16 08:28:51 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:28:56 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:29:12 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:29:13 [http-nio-8080-exec-4] INFO  c.m.p.controller.SeasonController - getting all table entries AWAY
-2024-08-16 08:29:13 [http-nio-8080-exec-5] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:29:19 [http-nio-8080-exec-6] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:29:22 [http-nio-8080-exec-7] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:29:53 [http-nio-8080-exec-8] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:30:52 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:30:54 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:32:11 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:32:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-16 08:32:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-08-16 08:32:12 [main] INFO  c.max.premdata.PremdataApplication - Starting PremdataApplication using Java 17.0.12 with PID 88661 (/Users/maxanderson/Documents/premdata/build/classes/java/main started by maxanderson in /Users/maxanderson/Documents/premdata)
-2024-08-16 08:32:12 [main] INFO  c.max.premdata.PremdataApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-16 08:32:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-16 08:32:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 10 JPA repository interfaces.
-2024-08-16 08:32:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-16 08:32:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:32:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-16 08:32:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-16 08:32:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-16 08:32:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 586 ms
-2024-08-16 08:32:13 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-16 08:32:13 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-16 08:32:13 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-16 08:32:13 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-16 08:32:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-16 08:32:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12448de1
-2024-08-16 08:32:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-16 08:32:13 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-16 08:32:13 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-16 08:32:13 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:32:13 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-16 08:32:14 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-16 08:32:14 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2024-08-16 08:32:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:32:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-08-16 08:32:14 [main] INFO  c.max.premdata.PremdataApplication - Started PremdataApplication in 2.062 seconds (process running for 2.207)
-2024-08-16 08:32:20 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-16 08:32:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-16 08:32:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-16 08:32:20 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:32:20 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - returned null
-2024-08-16 08:32:21 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:32:21 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - returned null
-2024-08-16 08:39:45 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:39:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-16 08:39:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-08-16 08:39:46 [main] INFO  c.max.premdata.PremdataApplication - Starting PremdataApplication using Java 17.0.12 with PID 88768 (/Users/maxanderson/Documents/premdata/build/classes/java/main started by maxanderson in /Users/maxanderson/Documents/premdata)
-2024-08-16 08:39:46 [main] INFO  c.max.premdata.PremdataApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-16 08:39:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-16 08:39:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 10 JPA repository interfaces.
-2024-08-16 08:39:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-16 08:39:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:39:46 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-16 08:39:46 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-16 08:39:46 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-16 08:39:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 573 ms
-2024-08-16 08:39:46 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-16 08:39:46 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-16 08:39:46 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-16 08:39:46 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-16 08:39:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-16 08:39:47 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6e948f1c
-2024-08-16 08:39:47 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-16 08:39:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-16 08:39:47 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-16 08:39:47 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:39:47 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-16 08:39:47 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-16 08:39:47 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2024-08-16 08:39:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:39:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-08-16 08:39:47 [main] INFO  c.max.premdata.PremdataApplication - Started PremdataApplication in 2.046 seconds (process running for 2.194)
-2024-08-16 08:39:54 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-16 08:39:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-16 08:39:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-16 08:39:54 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:39:58 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:39:59 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:40:00 [http-nio-8080-exec-4] INFO  c.m.p.controller.SeasonController - getting all table entries AWAY
-2024-08-16 08:40:01 [http-nio-8080-exec-5] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:40:01 [http-nio-8080-exec-6] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:40:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:40:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-16 08:40:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-08-16 08:40:30 [main] INFO  c.max.premdata.PremdataApplication - Starting PremdataApplication using Java 17.0.12 with PID 88819 (/Users/maxanderson/Documents/premdata/build/classes/java/main started by maxanderson in /Users/maxanderson/Documents/premdata)
-2024-08-16 08:40:30 [main] INFO  c.max.premdata.PremdataApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-16 08:40:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-16 08:40:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 10 JPA repository interfaces.
-2024-08-16 08:40:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-16 08:40:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:40:31 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-16 08:40:31 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-16 08:40:31 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-16 08:40:31 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 576 ms
-2024-08-16 08:40:31 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-16 08:40:31 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-16 08:40:31 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-16 08:40:31 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-16 08:40:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-16 08:40:31 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6dd20ec9
-2024-08-16 08:40:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-16 08:40:31 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-16 08:40:32 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-16 08:40:32 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:40:32 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-16 08:40:32 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-16 08:40:32 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2024-08-16 08:40:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-16 08:40:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-08-16 08:40:32 [main] INFO  c.max.premdata.PremdataApplication - Started PremdataApplication in 2.04 seconds (process running for 2.186)
-2024-08-16 08:40:37 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-16 08:40:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-16 08:40:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-16 08:40:37 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:40:39 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:40:40 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries AWAY
-2024-08-16 08:40:40 [http-nio-8080-exec-4] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:40:41 [http-nio-8080-exec-5] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:40:44 [http-nio-8080-exec-6] INFO  c.m.p.controller.SeasonController - getting all table entries AWAY
-2024-08-16 08:40:45 [http-nio-8080-exec-7] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:40:45 [http-nio-8080-exec-8] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:40:46 [http-nio-8080-exec-9] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:40:47 [http-nio-8080-exec-10] INFO  c.m.p.controller.SeasonController - getting all table entries AWAY
-2024-08-16 08:40:47 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:40:48 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:40:48 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:40:54 [http-nio-8080-exec-4] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:40:55 [http-nio-8080-exec-5] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:41:14 [http-nio-8080-exec-6] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:41:28 [http-nio-8080-exec-8] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:41:34 [http-nio-8080-exec-9] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:41:57 [http-nio-8080-exec-10] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:41:59 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:42:00 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:42:02 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:42:12 [http-nio-8080-exec-4] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:42:16 [http-nio-8080-exec-5] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:43:48 [http-nio-8080-exec-7] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:43:51 [http-nio-8080-exec-8] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:44:01 [http-nio-8080-exec-9] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:44:33 [http-nio-8080-exec-10] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:44:35 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:46:48 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:46:57 [http-nio-8080-exec-4] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:47:00 [http-nio-8080-exec-5] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2020
-2024-08-16 08:47:02 [http-nio-8080-exec-6] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2021
-2024-08-16 08:47:04 [http-nio-8080-exec-7] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2022
-2024-08-16 08:47:08 [http-nio-8080-exec-8] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2023
-2024-08-16 08:47:10 [http-nio-8080-exec-9] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:47:19 [http-nio-8080-exec-10] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2020
-2024-08-16 08:47:20 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 08:47:20 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries AWAY
-2024-08-16 08:47:21 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2020
-2024-08-16 08:47:43 [http-nio-8080-exec-4] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:47:52 [http-nio-8080-exec-5] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:47:58 [http-nio-8080-exec-6] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2020
-2024-08-16 08:47:59 [http-nio-8080-exec-7] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2023
-2024-08-16 08:48:03 [http-nio-8080-exec-8] INFO  c.m.p.controller.TeamController - getting squad
-2024-08-16 08:48:07 [http-nio-8080-exec-9] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
-2024-08-16 08:48:19 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 08:48:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-16 08:48:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-08-16 12:54:29 [main] INFO  c.max.premdata.PremdataApplication - Starting PremdataApplication using Java 17.0.12 with PID 90884 (/Users/maxanderson/Documents/premdata/build/classes/java/main started by maxanderson in /Users/maxanderson/Documents/premdata)
-2024-08-16 12:54:29 [main] INFO  c.max.premdata.PremdataApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-16 12:54:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-16 12:54:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 10 JPA repository interfaces.
-2024-08-16 12:54:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-16 12:54:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-16 12:54:30 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-16 12:54:30 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-16 12:54:30 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-16 12:54:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 654 ms
-2024-08-16 12:54:30 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-16 12:54:30 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-16 12:54:30 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-16 12:54:30 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-16 12:54:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-16 12:54:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@21280cbb
-2024-08-16 12:54:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-16 12:54:30 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-16 12:54:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-16 12:54:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 12:54:31 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-16 12:54:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-16 12:54:31 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2024-08-16 12:54:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-16 12:54:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-08-16 12:54:31 [main] INFO  c.max.premdata.PremdataApplication - Started PremdataApplication in 2.286 seconds (process running for 2.541)
-2024-08-16 12:54:41 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-16 12:54:41 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-16 12:54:41 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-16 12:54:41 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2023
-2024-08-16 12:54:48 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 12:54:51 [http-nio-8080-exec-3] INFO  c.m.p.controller.SeasonController - getting all table entries AWAY
-2024-08-16 12:54:54 [http-nio-8080-exec-4] INFO  c.m.p.controller.SeasonController - getting all table entries HOME
-2024-08-16 12:54:54 [http-nio-8080-exec-5] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2023
-2024-08-16 12:55:15 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-16 12:55:15 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-16 12:55:15 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-26 18:04:46 [main] INFO  c.max.premdata.PremdataApplication - Starting PremdataApplication using Java 17.0.12 with PID 26868 (/Users/maxanderson/Documents/premdata_application/premdata/build/classes/java/main started by maxanderson in /Users/maxanderson/Documents/premdata_application/premdata)
+2024-08-26 18:04:46 [main] INFO  c.max.premdata.PremdataApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-26 18:04:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-26 18:04:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 15 JPA repository interfaces.
+2024-08-26 18:04:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-26 18:04:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-26 18:04:47 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-26 18:04:47 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-26 18:04:47 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-26 18:04:47 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 625 ms
+2024-08-26 18:04:47 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-26 18:04:47 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-26 18:04:47 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-26 18:04:47 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-26 18:04:47 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-26 18:04:47 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@915d7c4
+2024-08-26 18:04:47 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-26 18:04:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-26 18:04:48 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-26 18:04:48 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-26 18:04:48 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-26 18:04:48 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-26 18:04:49 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-08-26 18:04:49 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-26 18:04:49 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-26 18:04:49 [main] INFO  c.max.premdata.PremdataApplication - Started PremdataApplication in 2.311 seconds (process running for 2.535)
+2024-08-26 18:05:03 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-26 18:05:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-26 18:05:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-26 18:05:03 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
+2024-08-26 18:05:04 [http-nio-8080-exec-2] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
+2024-08-26 18:05:05 [http-nio-8080-exec-3] INFO  c.m.p.controller.MatchController - getting all matches for matchday 1
+2024-08-26 18:05:10 [http-nio-8080-exec-4] INFO  c.m.p.controller.MatchController - getting all matches for matchday 34
+2024-08-26 18:05:12 [http-nio-8080-exec-5] INFO  c.m.p.controller.MatchController - getting all matches for matchday 0
+2024-08-26 18:05:13 [http-nio-8080-exec-6] INFO  c.m.p.controller.MatchController - getting all matches for matchday 1
+2024-08-26 18:05:20 [http-nio-8080-exec-7] INFO  c.m.p.controller.MatchController - getting all matches for matchday 1
+2024-08-26 18:05:23 [http-nio-8080-exec-8] INFO  c.m.p.controller.MatchController - getting all matches for matchday 38
+2024-08-26 18:05:26 [http-nio-8080-exec-9] INFO  c.m.p.controller.MatchController - getting all matches for matchday 1
+2024-08-26 18:05:28 [http-nio-8080-exec-10] INFO  c.m.p.controller.MatchController - getting all matches for matchday 2
+2024-08-26 18:05:30 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
+2024-08-26 18:06:08 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-26 18:06:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-26 18:06:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-26 18:06:09 [main] INFO  c.max.premdata.PremdataApplication - Starting PremdataApplication using Java 17.0.12 with PID 26956 (/Users/maxanderson/Documents/premdata_application/premdata/build/classes/java/main started by maxanderson in /Users/maxanderson/Documents/premdata_application/premdata)
+2024-08-26 18:06:09 [main] INFO  c.max.premdata.PremdataApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-26 18:06:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-26 18:06:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 15 JPA repository interfaces.
+2024-08-26 18:06:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-26 18:06:09 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-26 18:06:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-26 18:06:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-26 18:06:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-26 18:06:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 606 ms
+2024-08-26 18:06:09 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-26 18:06:09 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-26 18:06:09 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-26 18:06:10 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-26 18:06:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-26 18:06:10 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22aee519
+2024-08-26 18:06:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-26 18:06:10 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-26 18:06:10 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-26 18:06:10 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-26 18:06:10 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-26 18:06:11 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-26 18:06:11 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-08-26 18:06:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-26 18:06:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-26 18:06:11 [main] INFO  c.max.premdata.PremdataApplication - Started PremdataApplication in 2.221 seconds (process running for 2.373)
+2024-08-26 18:07:00 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 1
+2024-08-26 18:07:06 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 2
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 3
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 4
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 5
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 6
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 7
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 8
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 9
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 10
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:07:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 11
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 12
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 13
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 14
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 15
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 16
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 17
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 18
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 19
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 20
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:08:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 21
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 22
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 23
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 24
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 25
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 26
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 27
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 28
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 29
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 30
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:09:54 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 31
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:00 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 32
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:06 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 33
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:12 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 34
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:18 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 35
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:24 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 36
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:30 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 37
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:36 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - matchweek: 38
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:42 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [scheduling-1] INFO  com.max.premdata.job.PullDataJob - finished match job
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  c.m.p.f.CompareSavedAndPulledData - saving existing
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 18:10:48 [reactor-http-nio-2] INFO  com.max.premdata.job.PullDataJob - area here : 2072
+2024-08-26 19:07:36 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-26 19:07:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-26 19:07:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-08-26 19:07:36 [http-nio-8080-exec-1] INFO  c.m.p.controller.SeasonController - getting all table entries, season: 2024
+2024-08-26 19:07:42 [http-nio-8080-exec-2] INFO  c.m.p.controller.MatchController - getting all matches for matchday 1
+2024-08-26 19:07:44 [http-nio-8080-exec-3] INFO  c.m.p.controller.MatchController - getting all matches for matchday 2
+2024-08-26 19:07:50 [http-nio-8080-exec-4] INFO  c.m.p.controller.MatchController - getting all matches for matchday 3
+2024-08-26 19:07:51 [http-nio-8080-exec-5] INFO  c.m.p.controller.MatchController - getting all matches for matchday 2
+2024-08-26 19:08:24 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-26 19:08:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-26 19:08:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

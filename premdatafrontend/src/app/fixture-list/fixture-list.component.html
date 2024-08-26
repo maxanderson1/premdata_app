@@ -1,0 +1,28 @@
+
+
+
+<div class="fixture-list">
+    <h2 style="display: flex; justify-content: space-between; align-items: center;">
+        Football Fixtures
+        <p-dropdown [options]="matchweeks" placeholder="Select a Matchweek" [(ngModel)]="matchweek" 
+        (onChange)="getFixtures()"/>
+    </h2>
+    
+    <div *ngFor="let fixture of fixtures" class="fixture-item">
+      <div class="fixture-date">{{ fixture.utcDate | date:'short' }}</div>
+      <div class="fixture-teams">
+        <span>{{ fixture.homeTeamName }}</span>
+        <span> vs </span>
+        <span>{{ fixture.awayTeamName }}</span>
+      </div>
+      <div class="fixture-score" *ngIf="fixture.score.winner == null">
+        --        
+      </div>
+      <div class="fixture-score"*ngIf="fixture.score.winner != null">
+        <span *ngIf="fixture.score.fullTime.home !== null">{{ fixture.score.fullTime.home }}</span>
+        -
+        <span *ngIf="fixture.score.fullTime.away !== null">{{ fixture.score.fullTime.away }}</span>
+      </div>
+    </div>
+  </div>
+  
