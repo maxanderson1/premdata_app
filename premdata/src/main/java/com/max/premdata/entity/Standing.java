@@ -21,7 +21,7 @@ public class Standing {
     @JoinColumn(name = "season_id")
     private Season season;
 
-    @OneToMany(mappedBy = "standing", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "standing",  orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<TableEntry> table;
 
     public Long getId() {

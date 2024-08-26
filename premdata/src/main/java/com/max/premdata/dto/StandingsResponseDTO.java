@@ -14,7 +14,6 @@ public class StandingsResponseDTO {
     private SeasonDTO season;
     private List<StandingDTO> standings;
 
-    // Getters and Setters
     public FiltersDTO getFilters() {
         return filters;
     }

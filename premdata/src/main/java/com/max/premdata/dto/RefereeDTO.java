@@ -1,16 +1,10 @@
 package com.max.premdata.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class PlayerDTO {
-
+public class RefereeDTO {
     private Long id;
     private String name;
-    private String position;
-    private String dateOfBirth;
+    private String type;
     private String nationality;
-
 
     public Long getId() {
         return id;
@@ -28,20 +22,12 @@ public class PlayerDTO {
         this.name = name;
     }
 
-    public String getPosition() {
-        return position;
+    public String getType() {
+        return type;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getNationality() {
@@ -51,4 +37,6 @@ public class PlayerDTO {
     public void setNationality(String nationality) {
         this.nationality = nationality;
     }
+
 }
+

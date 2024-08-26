@@ -1,16 +1,16 @@
 package com.max.premdata.job;
 
+import com.max.premdata.dto.MatchResponseDTO;
 import com.max.premdata.dto.StandingsResponseDTO;
 import com.max.premdata.dto.TeamDTO;
-import com.max.premdata.entity.Season;
-import com.max.premdata.entity.TableEntry;
-import com.max.premdata.entity.Team;
+import com.max.premdata.dto.TopScorersDTO;
+import com.max.premdata.entity.*;
 import com.max.premdata.fbData.CompareSavedAndPulledData;
 import com.max.premdata.fbData.FootballDataAPIService;
-import com.max.premdata.mapping.SeasonMapper;
-import com.max.premdata.mapping.StandingsResponseMapper;
-import com.max.premdata.mapping.TeamMapper;
+import com.max.premdata.mapping.*;
+import com.max.premdata.repository.MatchDAO;
 import com.max.premdata.repository.TeamDAO;
+import com.max.premdata.service.ScorerService;
 import com.max.premdata.service.TeamService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,30 +45,17 @@ public class PullDataJob {
     @Autowired
     TeamDAO teamDAO;
 
-//    @Autowired
-//    StandingsResponseDAO standingsResponseDAO;
+    @Autowired
+    MatchDAO matchDAO;
+
+    @Autowired
+    ScorerService scorerService;
+
 
     private static final Logger logger = LoggerFactory.getLogger(PullDataJob.class);
 
 
-    //@Scheduled(cron = "0 * * * * *")
-//    public void pullPLTeamData(){
-//
-//        System.out.println("in start of cron job");
-//
-//        Mono<TeamDTO> teamMono = teamService.getTeamDataFromExternalAPI("64");
-//
-//        teamMono.subscribe(team -> {
-//            Team teamEntity = TeamMapper.toTeamEntity(team);
-//            compareService.checkTeamExists(teamEntity);
-//        });
-//
-//        pullPLTableData();
-//
-//    }
-
-
-    @Scheduled(cron = "0 13 22 * * *")
+    @Scheduled(cron = "@daily")
     public void pullPLTableData(){
 
         System.out.println("in start of cron job 2");
@@ -88,7 +75,7 @@ public class PullDataJob {
                 logger.info("standings size: " + season.getStandings().get(0).getTable().size());
 
 
-                compareService.checkSeasonExists(season);
+                compareService.saveNewOrExistingSeason(season);
 
                 Set<String> teamIds = season.getStandings().get(0)
                         .getTable()
@@ -124,7 +111,7 @@ public class PullDataJob {
             });
         }
 
-
+        pullTopScorerData();
 
         System.out.println("after save");
     }
@@ -132,15 +119,58 @@ public class PullDataJob {
 
     public void pullPLTeamData(String teamId){
 
-
         Mono<TeamDTO> teamMono = teamService.getTeamDataFromExternalAPI(teamId);
 
         teamMono.subscribe(team -> {
             Team teamEntity = TeamMapper.toTeamEntity(team);
-            compareService.checkTeamExists(teamEntity);
+            compareService.saveNewOrExistingTeam(teamEntity);
         });
+    }
 
 
+    @Scheduled(cron = "@daily")
+    public void pullMatchData(){
+
+        int totalMatchweeks = 38;
+
+        System.out.println("in start of match data job");
+
+        for (int i = 1; i <= totalMatchweeks ; i++) {
+
+            logger.info("matchweek: " + i);
+
+            Mono<MatchResponseDTO> matchResponseDTOMono = footballDataAPIService.getMatchExternalData(i);
+
+            matchResponseDTOMono.subscribe(matchResponseDTO -> {
+
+                Competition competition = compareService.checkSingleCompetitionExists(CompetitionMapper.toCompetitionEntity(matchResponseDTO.getCompetition()));
+                Season season = compareService.checkSeasonExists(SeasonMapper.toSeasonEntity(matchResponseDTO.getMatches().get(0).getSeason()));
+
+                List<Match> matchEntityList = MatchMapper.toMatchEntityListFromMatchResponseDTO(matchResponseDTO);
+
+                for (Match match : matchEntityList) {
+
+                    logger.info("area here : " + match.getAreaId());
+                    compareService.checkMatchExists(match);
+                }
+            });
+        }
+
+        logger.info("finished match job");
+    }
+
+
+    //@Scheduled(cron = "0 24 11 * * *")
+    public void pullTopScorerData(){
+        Mono<TopScorersDTO> topScorersDTOMono = footballDataAPIService.getPLTopScorers();
+
+        topScorersDTOMono.subscribe(topScorersDTO -> {
+            List<Scorer> scorerList = ScorerMapping.toScorerEntityListFromResponseDTO(topScorersDTO);
+
+            scorerList.forEach(scorer -> {
+                compareService.checkAndPersistTopScorer(scorer);
+            });
+        });
     }
 
 }
