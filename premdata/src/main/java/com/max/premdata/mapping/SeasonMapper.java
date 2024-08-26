@@ -1,15 +1,11 @@
 package com.max.premdata.mapping;
 
-import com.max.premdata.dto.PlayerDTO;
 import com.max.premdata.dto.SeasonDTO;
 import com.max.premdata.dto.StandingsResponseDTO;
-import com.max.premdata.entity.Player;
 import com.max.premdata.entity.Season;
 import com.max.premdata.entity.Standing;
-import com.max.premdata.entity.TableEntry;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Component
@@ -22,11 +18,11 @@ public class SeasonMapper {
 
         Season season = new Season();
 
-//        season.setId(seasonDTO.getId());
-//        season.setCurrentMatchday(seasonDTO.getCurrentMatchday());
-//        season.setStartDate(seasonDTO.getStartDate());
-//        season.setEndDate(seasonDTO.getEndDate());
-//        season.setWinner(seasonDTO.getWinner());
+        season.setId(seasonDTO.getId());
+        season.setCurrentMatchday(seasonDTO.getCurrentMatchday());
+        season.setStartDate(seasonDTO.getStartDate());
+        season.setEndDate(seasonDTO.getEndDate());
+        season.setWinner(seasonDTO.getWinner());
 
         return season;
     }

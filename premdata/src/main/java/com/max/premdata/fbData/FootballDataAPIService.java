@@ -3,8 +3,10 @@ package com.max.premdata.fbData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.max.premdata.controller.TeamController;
+import com.max.premdata.dto.MatchResponseDTO;
 import com.max.premdata.dto.StandingsResponseDTO;
 import com.max.premdata.dto.TeamDTO;
+import com.max.premdata.dto.TopScorersDTO;
 import com.max.premdata.entity.Property;
 import com.max.premdata.repository.PropertyDAO;
 import jakarta.annotation.PostConstruct;
@@ -60,7 +62,6 @@ public class FootballDataAPIService {
             TeamDTO team = objectMapper.readValue(json, TeamDTO.class);
             System.out.println("team here: " + team.getVenue());
 
-
             return Mono.just(team);
         } catch (Exception e) {
             return Mono.error(new RuntimeException("Failed to convert JSON to Team", e));
@@ -88,9 +89,6 @@ public class FootballDataAPIService {
         try {
             StandingsResponseDTO standingsResponse = objectMapper.readValue(json, StandingsResponseDTO.class);
 
-            logger.info("first logger ------ " + standingsResponse.getSeason().getStartDate());
-            logger.info(standingsResponse.getFilters().getSeason());
-
             return Mono.just(standingsResponse);
         } catch (Exception e) {
             return Mono.error(new RuntimeException("Failed to convert JSON to StandingsResponse", e));
@@ -98,25 +96,56 @@ public class FootballDataAPIService {
     }
 
 
-//    private Mono<StandingsResponseDTO> convertToSeasonDTO(String json) {
-//
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        objectMapper.registerModule(new JavaTimeModule());
-//
-//        try {
-//            StandingsResponseDTO standingsResponse = objectMapper.readValue(json, StandingsResponseDTO.class);
-//
-//            logger.info("first logger ------ " + standingsResponse.getSeason().getStartDate());
-//            logger.info(standingsResponse.getFilters().getSeason());
-//
-//            return Mono.just(standingsResponse);
-//        } catch (Exception e) {
-//            return Mono.error(new RuntimeException("Failed to convert JSON to StandingsResponse", e));
-//        }
-//    }
+    public Mono<MatchResponseDTO> getMatchExternalData(int matchweek) {
+
+        waitSixSeconds();
+
+        return this.webClient.get()
+                .uri("http://api.football-data.org/v4/competitions/2021/matches?matchday=" + matchweek)
+                .header("X-Auth-Token", this.authToken)
+                .retrieve()
+                .bodyToMono(String.class)
+                .flatMap(this::convertToMatchResponseDTO);
+    }
+
+    private Mono<MatchResponseDTO> convertToMatchResponseDTO(String json) {
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            MatchResponseDTO matchResponseDTO = objectMapper.readValue(json, MatchResponseDTO.class);
+
+            return Mono.just(matchResponseDTO);
+        } catch (Exception e) {
+            return Mono.error(new RuntimeException("Failed to convert JSON to Match", e));
+        }
+    }
+
+
+    public Mono<TopScorersDTO> getPLTopScorers() {
+
+        waitSixSeconds();
+
+        return this.webClient.get()
+                .uri("http://api.football-data.org/v4/competitions/2021/scorers?limit=20")
+                .header("X-Auth-Token", this.authToken)
+                .retrieve()
+                .bodyToMono(String.class)
+                .flatMap(this::convertToTopScorersDTO);
+    }
+
+    private Mono<TopScorersDTO> convertToTopScorersDTO(String json) {
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            TopScorersDTO topScorersDTO = objectMapper.readValue(json, TopScorersDTO.class);
+            return Mono.just(topScorersDTO);
+        } catch (Exception e) {
+            return Mono.error(new RuntimeException("Failed to convert JSON to top scorers", e));
+        }
+    }
+
 
     public void waitSixSeconds(){
-        //avoid exceeding limit of 10 calls to external API per minute
 
         try {
             Thread.sleep(6000);

@@ -12,7 +12,6 @@ public class SeasonDTO {
     @JsonIgnore
     private String winner; // This is nullable, so it should be a String
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }
