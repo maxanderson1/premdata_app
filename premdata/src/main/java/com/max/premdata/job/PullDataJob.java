@@ -128,7 +128,7 @@ public class PullDataJob {
     }
 
 
-    @Scheduled(cron = "@daily")
+    @Scheduled(cron = "0 07 18 * * *")
     public void pullMatchData(){
 
         int totalMatchweeks = 38;

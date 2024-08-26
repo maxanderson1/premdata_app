@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
+import { FixtureListComponent } from "../fixture-list/fixture-list.component";
 
 
 
@@ -14,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-standings',
   standalone: true,
-  imports: [TableModule, ButtonModule, CommonModule, DropdownModule, FormsModule],
+  imports: [TableModule, ButtonModule, CommonModule, DropdownModule, FormsModule, FixtureListComponent],
   templateUrl: './standings.component.html',
   styleUrl: './standings.component.css'
 })

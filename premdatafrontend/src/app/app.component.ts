@@ -36,7 +36,10 @@ export class AppComponent {
   // Menubar items
   items = [
     { label: 'Home', icon: 'pi pi-home', routerLink: '/standings' },
-    { label: 'About', icon: 'pi pi-info-circle', routerLink: '/about' },
+    { label: 'Fixtures', icon: 'pi pi-calendar', routerLink: '/fixtures' },
+    { label: 'Top Scorers', icon: 'pi pi-crown', routerLink: '/top-scorers' }
+
+
     // Add more items as needed
   ];
 
