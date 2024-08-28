@@ -1,0 +1,28 @@
+.standings-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* margin-bottom: 20px; */
+  }
+
+  .table-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00e6c3;
+    border: 1px solid #000000;
+    cursor: pointer;
+  }
+
+  .table-button.selected {
+    background-color: #00e6c3; /* Green color */
+    color: white;
+    border-color: #00e6c3; /* Slightly darker green for border */
+  }

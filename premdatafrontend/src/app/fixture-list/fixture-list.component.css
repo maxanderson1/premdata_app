@@ -2,23 +2,30 @@
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: #1e2530;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: #ffffff;
   }
   
   .fixture-item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
+    margin-bottom: 1rem;
+    padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: white;
+    background-color: #2a3441;
+    justify-content: space-between;
   }
   
   .fixture-date {
     flex: 1;
     text-align: left;
     font-weight: bold;
+    color: #a0a0a0;
+    font-size: 0.9rem;
   }
   
   .fixture-details {
@@ -37,6 +44,40 @@
     margin-left: 20px;
     font-size: 22px;
     font-weight: bold;
-    color: #666;
+    color: #00e6c3;
   }
   
+  /* Dropdown styles (if not already styled globally) */
+  :host ::ng-deep .p-dropdown {
+    background-color: #2a3441;
+    border: 1px solid #3a4551;
+    color: #ffffff;
+  }
+  
+  :host ::ng-deep .p-dropdown:not(.p-disabled).p-focus {
+    border-color: #00e6c3;
+    box-shadow: 0 0 0 1px #00e6c3;
+  }
+  
+  :host ::ng-deep .p-dropdown-panel {
+    background-color: #2a3441;
+    border: 1px solid #3a4551;
+  }
+  
+  :host ::ng-deep .p-dropdown-item {
+    color: #ffffff;
+  }
+  
+  :host ::ng-deep .p-dropdown-item:hover {
+    background-color: #3a4551;
+  }
+  
+  :host ::ng-deep .p-dropdown-item.p-highlight {
+    background-color: #00e6c3;
+    color: #1e2530;
+  }
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}

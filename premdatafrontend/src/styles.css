@@ -1,22 +1,235 @@
-
-
-:root {
-    --primary-color: #1976d2;
-    --secondary-color: #ff4081;
-    --background-color: #f5f5f5;
-    --text-color: #333;
-  }
-  
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Roboto', sans-serif;
-  }
-  
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-/* 
+/* Base styles */
 body {
-  background-color: rgb(221, 232, 236); /* Replace with your desired color */
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #2a3441; /* Lighter background color */
+  margin: 0;
+  padding: 0;
+}
 
+/* Menubar styles */
+.p-menubar {
+  background-color: #1e2530;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.p-menubar .p-menuitem-link {
+  color: #ffffff; /* Bright white text in menu bar */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.p-menubar .p-menuitem-link:hover {
+  color: #00e6c3; /* Teal color on hover for contrast */
+}
+
+.p-menubar .p-menuitem-text {
+  color: #ffffff; /* Ensure text is white */
+}
+
+/* For buttons in the menu bar, if any */
+.p-menubar .p-button {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+.p-menubar .p-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar styles */
+.p-sidebar {
+  width: 60px;
+  background-color: #1e2530;
+  border-right: 1px solid #2a3441;
+}
+
+.p-sidebar .p-sidebar-content {
+  padding: 1rem 0;
+}
+
+/* Layout styling */
+.layout {
+  max-width: 1200px; /* Adjust this value as needed */
+  margin: 0 auto; /* This centers the content */
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Card styles */
+.dashboard-card {
+  background-color: #2a3441;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-card .value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Highlight card */
+.highlight-card {
+  background-color: #00e6c3;
+  color: #1e2530;
+}
+
+/* Warning card */
+.warning-card {
+  background-color: #ffa500;
+  color: #1e2530;
+}
+
+/* Chart styles */
+.chart-container {
+  background-color: #2a3441;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Table styles */
+.p-datatable {
+  background-color: #1e2530;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.p-datatable .p-datatable-header {
+  background-color: #1e2530;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: #3a4551;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  background-color: #1e2530;
+  border-bottom: 1px solid #3a4551;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: #3a4551;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  padding: 0.75rem 1rem;
+  border: none;
+  color: #ffffff; /* White text in table cells */
+}
+
+/* Button styles */
+button {
+  background-color: #00e6c3;
+  color: #1e2530;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00c4a7;
+}
+
+/* Search input */
+.search-input {
+  background-color: #2a3441;
+  border: 1px solid #3a4551;
+  border-radius: 20px;
+  color: #e0e0e0;
+  padding: 0.5rem 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .p-sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .layout {
+    left: 0;
+    top: 120px;
+    padding: 1rem;
+  }
+  
+  .p-datatable .p-datatable-thead > tr > th,
+  .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.5rem;
+  }
+}
+
+/* Dropdown styles */
+.p-dropdown {
+  background-color: #1e2530;
+  border: 1px solid #3a4551;
+  border-radius: 5px;
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+  border-color: #00e6c3;
+  box-shadow: 0 0 0 1px #00e6c3;
+}
+
+.p-dropdown .p-dropdown-label {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+
+.p-dropdown .p-dropdown-trigger {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.p-dropdown-panel {
+  background-color: #1e2530;
+  border: 1px solid #3a4551;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.p-dropdown-items {
+  padding: 0.5rem 0;
+}
+
+.p-dropdown-item {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.p-dropdown-item:hover {
+  background-color: #2a3441;
+  color: #00e6c3;
+}
+
+.p-dropdown-item.p-highlight {
+  background-color: #00e6c3;
+  color: #1e2530;
+}

@@ -1,23 +1,30 @@
 <p>Showing table data for the {{season}} season</p>
 
 
-<div style="display: flex; justify-content: center; align-items: center;">
-    <button style="padding: 10px 20px; font-size: 16px;" (click)="getTotalTable()">Total</button>
-    <button style="padding: 10px 20px; font-size: 16px;" (click)="getHomeTable()">Home</button>
-    <button style="padding: 10px 20px; font-size: 16px;" (click)="getAwayTable()">Away</button>
-</div>
 
-<p-dropdown 
-    [options]="seasons" 
-    [(ngModel)]="season" 
-    placeholder= "Select a season"
-    (onChange)="getTotalTable()"
-    >
+
+    <div class="standings-controls">
+        <div class="button-container">
+            <button class="table-button" [class.selected]="selectedView === 'total'" (click)="setView('total')">Total</button>
+            <button class="table-button" [class.selected]="selectedView === 'home'" (click)="setView('home')">Home</button>
+            <button class="table-button" [class.selected]="selectedView === 'away'" (click)="setView('away')">Away</button>        
+        </div>
+
+        <div class="season-selector">
+          <p-dropdown 
+          [options]="seasons" 
+          [(ngModel)]="season" 
+          placeholder= "Select a season"
+          (onChange)="getTotalTable()"
+            styleClass="season-dropdown">
+          </p-dropdown>
+        </div>
+      </div>
+
 
     <ng-template let-season pTemplate="item">
         {{ season }}
       </ng-template>
-    </p-dropdown>
 
 <div class="card">
     <p-table [columns]="cols" [value]="standingData" [tableStyle]="{ 'min-width': '50rem' }" styleClass="p-datatable-gridlines"
