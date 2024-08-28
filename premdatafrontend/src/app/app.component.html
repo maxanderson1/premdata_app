@@ -1,40 +1,12 @@
 <!-- Menubar at the top -->
-<!-- <p-menubar>
-    <ng-template pTemplate="start">
-      <div class="logo">My App</div>
-    </ng-template>
-    <ng-template pTemplate="end">
-      <p-menubar #menu [model]="items"></p-menubar>
-    </ng-template>
-  </p-menubar> -->
+<p-menubar #menu [model]="items">
+  <ng-template pTemplate="start">
+    <div class="logo">Prem Data</div>
+  </ng-template>
+</p-menubar>
 
-  <p-menubar #menu [model]="items">
-
-    <!-- <button pButton type="button" icon="pi pi-bars" label="Success"></button> -->
-
-    <ng-template pTemplate="start">
-        <div class="logo">Prem Data</div>
-      </ng-template>
-
-  </p-menubar>
-
-  
-  <!-- Sidebar on the left -->
-  <p-sidebar class="sidenav" [(visible)]="sidebarVisible" position="left" [baseZIndex]="10000">
-    <h1>Sidebar Content</h1>
-    <ul>
-      <li><a routerLink="/dashboard">Dashboard</a></li>
-      <li><a routerLink="/profile">Profile</a></li>
-      <!-- Other sidebar links -->
-    </ul>
-  </p-sidebar>
-  
-  <!-- Main content area -->
-  <div class="layout">
-    <!-- Sidebar toggle button -->
-    <button type="button" (click)="toggleSidebar()">Toggle Sidebar</button>
-  
-    <!-- Routed content -->
-    <router-outlet></router-outlet>
-  </div>
-  
+<!-- Main content area -->
+<div class="layout">
+  <!-- Routed content -->
+  <router-outlet></router-outlet>
+</div>

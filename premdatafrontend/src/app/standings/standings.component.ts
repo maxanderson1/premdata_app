@@ -26,6 +26,7 @@ export class StandingsComponent {
   selectedTeam: TableEntry;
   season: string = "2024";
   seasons: string[];
+  selectedView: string = 'total';
 
   constructor(private standingsService: StandingsService,
     private router: Router) { }
@@ -42,6 +43,7 @@ export class StandingsComponent {
       { field: 'position', header: 'Position' },
       { field: 'teamName', header: 'Team' },
       { field: 'form', header: 'Form' },
+      { field: 'playedGames', header: 'Played' },
       { field: 'won', header: 'Won' },
       { field: 'draw', header: 'Draw' },
       { field: 'lost', header: 'Lost' },
@@ -82,6 +84,19 @@ export class StandingsComponent {
     )
   }
 
-
+  setView(view: string) {
+    this.selectedView = view;
+    switch (view) {
+      case 'total':
+        this.getTotalTable();
+        break;
+      case 'home':
+        this.getHomeTable();
+        break;
+      case 'away':
+        this.getAwayTable();
+        break;
+    }
+  }
 }
 
